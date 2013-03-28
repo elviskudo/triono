@@ -58,11 +58,12 @@ angular.module('projectApi', ['ngResource']).factory('Project', function($resour
 
   Project.prototype.update = function(cb) {
     return Project.save({id: this.id},
-        angular.extend({}, this, {id:undefined}), cb);
+      angular.extend({}, this, {id:undefined}), cb);
   };
 
   Project.prototype.destroy = function(cb) {
-    return Project.remove({id: this.id}, cb);
+    if(window.confirm('Are you sure want to delete this? This Action CANNOT BE UNDONE!'))
+      return Project.remove({id: this.id}, cb);
   };
 
   return Project;
