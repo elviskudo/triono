@@ -14,6 +14,9 @@
       body {
         padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
       }
+      ul li {
+        margin: 20px 0;
+      }
     </style>
     <link href="static/css/bootstrap-responsive.css" rel="stylesheet">
 
@@ -33,6 +36,7 @@
     <div class="navbar navbar-inverse navbar-fixed-top">
       <div class="navbar-inner">
         <div class="container">
+          <a class="btn" href="<?php echo site_url('projects#/new') ?>">Add</a>
           <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
